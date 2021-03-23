@@ -1,0 +1,39 @@
+{
+  "name": "id-to-integer",
+  "version": "0.0.0",
+  "description": "Encode and decode EPR IDs to integers",
+  "main": "main.js",
+  "scripts": {
+    "lint": "npx eslint --cache --ext .ts .",
+    "lint:fix": "npx eslint --cache --ext .ts . --fix",
+    "format": "npx prettier --loglevel silent --write \"**/*\"",
+    "transpile": "npx tsc -p .",
+    "build": "npm run -s lint && npm run -s transpile",
+    "test": "npm run -s build && npm run test:unit",
+    "test:unit": "NODE_ENV=test npx mocha './test/**/*.js'",
+    "prerelease": "npm run build",
+    "release": "npx release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/overcaffed/id-to-integer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/overcaffed/id-to-integer#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix --ext .ts",
+    "*": "prettier --write"
+  },
+  "devDependencies": {
+    "husky": "^5.2.0",
+    "lint-staged": "^10.5.4",
+    "typescript": "^4.2.3"
+  }
+}

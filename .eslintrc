@@ -1,0 +1,62 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx"],
+            "extends": ["./typescript.json"]
+        },
+        {
+            "files": ["test/**/*.ts", "client/test/**/*.ts"],
+            "rules": {
+                "@typescript-eslint/explicit-function-return-type": "off"
+            }
+        }
+    ],
+    "rules": {
+        "no-constant-condition": "error",
+        "no-cond-assign": "error",
+        "no-console": "error",
+        "no-debugger": "error",
+        "no-duplicate-case": "error",
+        "no-control-regex": "error",
+        "no-empty-character-class": "error",
+        "no-ex-assign": "error",
+        "no-extra-boolean-cast": "error",
+        "no-inner-declarations": ["error", "functions"],
+        "no-invalid-regexp": "error",
+        "require-await": "error",
+        "no-regex-spaces": "error",
+        "no-sparse-arrays": "error",
+        "no-unsafe-finally": "error",
+        "use-isnan": "error",
+        "valid-typeof": "error",
+        "complexity": [
+            "error",
+            {
+                "max": 35
+            }
+        ],
+        "curly": "error",
+        "default-case": "error",
+        "eqeqeq": ["error", "smart"],
+        "guard-for-in": "error",
+        "no-eval": "error",
+        "no-empty": "error",
+        "no-redeclare": "error",
+        "radix": "error",
+        "handle-callback-err": ["error", "error"],
+        "prefer-const": "error",
+        "spaced-comment": "error",
+        "no-var": "error",
+        "no-fallthrough": "error",
+        "object-shorthand": "error"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "mapRoot": "./",
+        "rootDir": "./",
+        "watch": false,
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "skipLibCheck": true,
+        "strictNullChecks": true,
+        "strictBindCallApply": true,
+        "strictPropertyInitialization": true
+    },
+    "include": ["./*.ts"],
+    "exclude": ["node_modules", ".vscode", "bin", "build", "buildtmp"],
+    "compileOnSave": true
+}
